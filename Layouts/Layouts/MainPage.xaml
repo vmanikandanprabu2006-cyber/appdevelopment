@@ -4,7 +4,7 @@
              x:Class="Layouts.MainPage">
 
     <ScrollView>
-        <HorizontalStackLayout
+        <VerticalStackLayout
             Padding="30,0"
             Spacing="25">
             <Image
@@ -30,7 +30,7 @@
                 SemanticProperties.Hint="Counts the number of times you click"
                 Clicked="OnCounterClicked"
                 HorizontalOptions="Fill" />
-        </HorizontalStackLayout>
+        </VerticalStackLayout>
     </ScrollView>
 
 </ContentPage>
