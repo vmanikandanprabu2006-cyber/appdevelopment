@@ -1,0 +1,29 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StudentManagementApp.MarkSheetPage"
+             Title="Marksheet">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="30" Spacing="15">
+
+            <Label Text="Marksheet Page"
+                   FontSize="25"
+                   HorizontalOptions="Center"/>
+
+            <Entry x:Name="txtName" Placeholder="Student Name"/>
+
+            <Entry x:Name="txtMath" Placeholder="Math Marks" Keyboard="Numeric"/>
+            <Entry x:Name="txtScience" Placeholder="Science Marks" Keyboard="Numeric"/>
+            <Entry x:Name="txtEnglish" Placeholder="English Marks" Keyboard="Numeric"/>
+
+            <Button Text="Calculate"
+                    Clicked="OnCalculateClicked"/>
+
+            <Label x:Name="lblResult"
+                   FontSize="18"
+                   TextColor="White"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

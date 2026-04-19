@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SampleProject.MVVM.Views.StudentRegistrationview"
+             Title="StudentRegistrationview">
+
+    <CollectionView ItemsSource="{Binding Registeredstudents}">
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <Border>
+                    <StackLayout>
+                    <Label Text="{Binding Name}" FontSize="20" />
+                    <Label Text="{Binding Age}" FontSize="16" />
+                </StackLayout>
+                </Border>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
+</ContentPage>

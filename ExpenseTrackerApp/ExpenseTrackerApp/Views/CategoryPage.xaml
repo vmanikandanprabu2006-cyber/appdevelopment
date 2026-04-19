@@ -1,0 +1,34 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ExpenseTrackerApp.Views.CategoryPage">
+
+    <VerticalStackLayout Padding="20" Spacing="10">
+
+        <!-- Add Category -->
+        <Entry Placeholder="Category Name"
+               Text="{Binding NewCategoryName}" />
+
+        <Entry Placeholder="Emoji Icon (🍔)"
+               Text="{Binding NewCategoryIcon}" />
+
+        <Button Text="Add Category"
+                Clicked="OnAddClicked"/>
+
+        <!-- Category List -->
+        <CollectionView ItemsSource="{Binding Categories}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <HorizontalStackLayout Spacing="10">
+                        <Label Text="{Binding Icon}" FontSize="20"/>
+                        <Label Text="{Binding Name}" />
+
+                        <Button Text="Delete"
+                                Clicked="OnDeleteClicked"/>
+                    </HorizontalStackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+    </VerticalStackLayout>
+
+</ContentPage>
