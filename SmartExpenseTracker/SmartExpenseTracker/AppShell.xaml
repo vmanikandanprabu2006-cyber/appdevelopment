@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="SmartExpenseTracker.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:SmartExpenseTracker"
+    xmlns:views="clr-namespace:SmartExpenseTracker.Views"
+    Title="SmartExpenseTracker">
+
+    <TabBar>
+
+        <ShellContent
+        Title="Home"
+        Icon="home.png"
+        ContentTemplate="{DataTemplate views:MainPage}" />
+
+        <ShellContent
+        Title="Add"
+        Icon="add.png"
+        ContentTemplate="{DataTemplate views:AddExpensePage}" />
+
+        <ShellContent
+        Title="Reports"
+        Icon="chart.png"
+        ContentTemplate="{DataTemplate views:ReportPage}" />
+
+    </TabBar>
+</Shell>

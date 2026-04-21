@@ -1,10 +1,16 @@
-﻿namespace ExpenseTrackerApp
+﻿using System.Diagnostics;
+
+namespace ExpenseTrackerApp
 {
-    internal class AppShell : Page
+    [DebuggerDisplay($"{{{nameof(DebuggerDisplay)}(),nq}}")]
+    internal partial class AppShell : Page
     {
+        /* Quota exceeded. Please try again later. */
         public static implicit operator Page(AppShell v)
         {
             throw new NotImplementedException();
         }
+
+        private static string DebuggerDisplay => ToString();
     }
 }
